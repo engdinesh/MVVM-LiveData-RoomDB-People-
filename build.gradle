@@ -1,0 +1,72 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.3'
+        
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+
+// Define versions in a single place
+ext {
+    // Sdk and tools
+    minSdkVersion = 19
+    targetSdkVersion = 28
+    compileSdkVersion = 28
+    buildToolsVersion = '28.0.0'
+    multidexVersion = '1.0.1'
+    supportLibraryVersion = '28.0.0'
+    constraintLayout = '1.1.2'
+
+    // App dependencies
+    gsonVersion = '2.8.5'
+    calligraphyVersion = '3.0.0'
+    calligraphyViewPumpVersion = '1.0.0'
+    glideVersion = '4.8.0'
+    materialExitTextVersion = '2.1.4'
+    appLoader = '1.0.+'
+    roundedImage = '2.3.0'
+    circularShadowImageView = '1.2.0'
+    datePicker = '1.0.6'
+    apacheCommons = '3.4'
+    ratingBar = '0.1.5'
+
+
+    dagger2Version = '2.16'
+    rxjava2Version = '2.1.9'
+    rxandroidVersion = '2.1.1'
+    rxImagePicker = '2.1.5'
+    retrofitRxJavaAdapterVersion = '1.0.0'
+    butterKnifeVersion = '10.0.0'
+    retrofitVersion = '2.4.0'
+    okHttpVersion = '3.0.1'
+    okHttpLoggingVersion = '3.4.1'
+    eventBus = '3.0.0'
+    brainTree = '2.17.0'
+    brainTreeDropIn = '3.+'
+
+    //Test dependencies
+    junitVersion = '4.12'
+    testRunnerVersion = '1.0.2'
+    espressoVersion = '3.0.2'
+}

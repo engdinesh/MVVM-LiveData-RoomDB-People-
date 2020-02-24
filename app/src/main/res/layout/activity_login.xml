@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="LoginViewModel"
+            type="com.example.ui.login.LoginViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:elevation="20dp"
+        android:background="#aaacdddd"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="26dp"
+        android:layout_marginRight="26dp"
+        android:padding="26dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to"
+        android:textSize="16sp"
+        android:textColor="@color/colorBlue"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="YOUR APP NAME"
+        android:textSize="22sp"
+        android:layout_marginBottom="20dp"
+        android:textColor="@color/colorBlue"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:text="@={LoginViewModel.EmailAddress}"
+            android:inputType="textEmailAddress"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Email id"
+            android:background="@android:color/transparent"
+            android:textSize="16sp"
+            android:textColor="@color/colorBlueLight"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+
+        <EditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:text="@={LoginViewModel.Password}"
+            android:inputType="textPassword"
+            android:layout_marginTop="20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password"
+            android:background="@android:color/transparent"
+            android:textSize="16sp"
+            android:textColor="@color/colorBlueLight"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_forgot_password"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        android:text="Forgot password?"
+        android:textColor="@color/colorBlueLight"/>
+
+    <TextView
+        android:id="@+id/btn_login"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:onClick="@{(v) -> LoginViewModel.onClick(v)}"
+        android:background="@android:color/holo_blue_light"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:gravity="center"
+        android:text="LOGIN"
+        android:textColor="@color/colorWhite"/>
+
+    </LinearLayout>
+
+
+    </RelativeLayout>
+
+</layout>
