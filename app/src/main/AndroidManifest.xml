@@ -21,7 +21,8 @@
 
         </activity>
 
-        <activity android:name=".ui.person.MainActivity">
+        <activity android:name=".ui.person.MainActivity"
+           >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

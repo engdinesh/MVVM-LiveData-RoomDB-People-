@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:elevation="10dp"
-    android:background="@color/white"
+    app:cardBackgroundColor="#40ffffff"
     android:layout_marginLeft="20dp"
     android:layout_marginRight="20dp"
     android:layout_marginTop="20dp"
@@ -34,25 +34,15 @@
                     android:layout_height="wrap_content"
                     android:text="Dinesh Singh"
                     android:layout_centerVertical="true"
-                    android:textColor="@color/colorPrimary"
+                    android:textColor="@color/white"
                     android:textSize="16sp" />
-
-                <ImageView
-                    android:id="@+id/iv_delete"
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
-                    android:layout_gravity="right"
-                    android:visibility="gone"
-                    android:layout_alignParentRight="true"
-                    android:src="@android:drawable/ic_menu_delete" />
-
             </RelativeLayout>
 
             <TextView
                 android:id="@+id/person_email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="@color/cardview_dark_background"
+                android:textColor="@color/colorWhite"
                 android:text="dinesh@iglulabs.com" />
 
 
@@ -66,7 +56,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="4654865565"
-                    android:textColor="@color/cardview_dark_background"
+                    android:textColor="@color/colorWhite"
                     android:drawablePadding="5dp"/>
 
                 <TextView
@@ -74,7 +64,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="15dp"
-                    android:textColor="@color/cardview_dark_background"
+                    android:textColor="@color/colorWhite"
                     android:text="Noida" />
 
                 <TextView

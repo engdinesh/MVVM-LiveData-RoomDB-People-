@@ -139,7 +139,7 @@ public class MainActivity extends AppCompatActivity implements View.OnLongClickL
                         RectF icon_dest = new RectF((float) itemView.getLeft() + width, (float) itemView.getTop() + width, (float) itemView.getLeft() + 2 * width, (float) itemView.getBottom() - width);
                         c.drawBitmap(icon, null, icon_dest, p);
                     } else {
-                        p.setColor(getResources().getColor(R.color.colorBlue));
+                        p.setColor(getResources().getColor(R.color.colorBlack));
                         RectF background = new RectF((float) itemView.getRight() + dX, (float) itemView.getTop(), (float) itemView.getRight(), (float) itemView.getBottom());
                         c.drawRoundRect(background,15,15, p);
                         icon = BitmapFactory.decodeResource(getResources(), android.R.drawable.ic_menu_delete);

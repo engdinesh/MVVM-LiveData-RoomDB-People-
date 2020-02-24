@@ -66,7 +66,6 @@ public class PersonAdaptor extends RecyclerView.Adapter<PersonAdaptor.MyViewHold
 
     class MyViewHolder extends RecyclerView.ViewHolder {
         TextView name, email, pincode, number, city;
-        ImageView iv_delete;
 
         MyViewHolder(@NonNull final View itemView) {
             super(itemView);
@@ -75,14 +74,7 @@ public class PersonAdaptor extends RecyclerView.Adapter<PersonAdaptor.MyViewHold
             pincode = itemView.findViewById(R.id.person_pincode);
             number = itemView.findViewById(R.id.person_number);
             city = itemView.findViewById(R.id.person_city);
-            iv_delete = itemView.findViewById(R.id.iv_delete);
 
-            iv_delete.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-
-                }
-            });
         }
 
     }

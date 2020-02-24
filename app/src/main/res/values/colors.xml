@@ -7,7 +7,7 @@
     <color name="colorBlue">#3099c0</color>
     <color name="colorBlueLight">#3099c0</color>
     <color name="colorGreen">#73c246</color>
-    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorWhite">#dddddd</color>
     <color name="colorBlack">#1f1f1f</color>
     <color name="colorGray">@android:color/darker_gray</color>
 </resources>
