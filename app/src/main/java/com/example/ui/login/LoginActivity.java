@@ -1,8 +1,12 @@
 package com.example.ui.login;
 
 import android.content.Context;
+import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.WindowManager;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import androidx.lifecycle.Observer;
@@ -12,6 +16,7 @@ import com.example.data.model.LoginUser;
 import com.example.data.model.NewsArticle;
 import com.example.data.model.NewsResponse;
 import com.example.databinding.ActivityLoginBinding;
+import com.example.ui.person.MainActivity;
 
 import java.util.List;
 import java.util.Objects;
@@ -32,6 +37,12 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         context=this;
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+
+            getWindow().setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS,
+                    WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
+        }
 
         binding = DataBindingUtil.setContentView(LoginActivity.this, R.layout.activity_login);
         loginViewModel = ViewModelProviders.of(this).get(LoginViewModel.class);
@@ -73,13 +84,17 @@ public class LoginActivity extends AppCompatActivity {
 
     private void callLogin()
     {
-        loginViewModel.init();
+
+        Intent intent=new Intent(context, MainActivity.class);
+        startActivity(intent);
+        finish();
+      /*  loginViewModel.init();
         loginViewModel.getNewsRepository().observe(this, new Observer<NewsResponse>() {
             @Override
             public void onChanged(NewsResponse newsResponse) {
 
             }
-        });
+        });*/
     }
 
 
