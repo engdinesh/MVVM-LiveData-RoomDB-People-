@@ -41,7 +41,7 @@ public class LoginViewModel extends ViewModel {
 
     }
 
-    public void init(){
+/*    public void init(){
         if (mutableLiveData != null){
             return;
         }
@@ -61,7 +61,7 @@ public class LoginViewModel extends ViewModel {
                     }
                 }));
 
-    }
+    }*/
 
     public LiveData<NewsResponse> getNewsRepository() {
 

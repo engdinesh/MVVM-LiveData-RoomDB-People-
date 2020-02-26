@@ -2,21 +2,22 @@ package com.example.data.rest;
 
 
 
-import com.example.data.model.NewsResponse;
+import com.example.data.model.WeatherResponse;
+
 import io.reactivex.Single;
 import io.reactivex.disposables.CompositeDisposable;
 
 public class RepoRepository {
 
-    private static RepoRepository newsRepository;
+    private static RepoRepository repoRepository;
     private static CompositeDisposable disposable;
 
 
     public static RepoRepository getInstance(){
-        if (newsRepository == null){
-            newsRepository = new RepoRepository();
+        if (repoRepository == null){
+            repoRepository = new RepoRepository();
         }
-        return newsRepository;
+        return repoRepository;
     }
 
     public static CompositeDisposable getDisposable(){
@@ -27,14 +28,15 @@ public class RepoRepository {
     }
 
 
-    private ApiHelper newsApi;
+    private ApiHelper apiHelper;
 
     public RepoRepository(){
-        newsApi = ApiService.cteateService(ApiHelper.class);
+        apiHelper = ApiService.cteateService(ApiHelper.class);
     }
 
-    public Single<NewsResponse> getNews(String source, String key) {
-        return newsApi.getNewsList(source, key);
+    public Single<WeatherResponse> getWeather(String lat, String lon, String appid) {
+        return apiHelper.getWeather(lat, lon, appid);
     }
+
 
 }

@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.TextUtils;
+import android.view.View;
 import android.view.WindowManager;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,7 +17,9 @@ import com.example.data.model.LoginUser;
 import com.example.data.model.NewsArticle;
 import com.example.data.model.NewsResponse;
 import com.example.databinding.ActivityLoginBinding;
+import com.example.generated.callback.OnClickListener;
 import com.example.ui.person.MainActivity;
+import com.example.ui.weather.WeatherActivity;
 
 import java.util.List;
 import java.util.Objects;
@@ -51,6 +54,13 @@ public class LoginActivity extends AppCompatActivity {
 
         binding.setLoginViewModel(loginViewModel);
 
+        binding.weatherInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(context,WeatherActivity.class);
+                startActivity(intent);
+            }
+        });
 
         loginViewModel.getUser().observe(this, new Observer<LoginUser>() {
             @Override
@@ -85,7 +95,7 @@ public class LoginActivity extends AppCompatActivity {
     private void callLogin()
     {
 
-        Intent intent=new Intent(context, MainActivity.class);
+        Intent intent=new Intent(context, WeatherActivity.class);
         startActivity(intent);
         finish();
       /*  loginViewModel.init();
